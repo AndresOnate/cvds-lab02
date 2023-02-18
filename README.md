@@ -61,11 +61,27 @@ Creamos los paquetes mencionados en el enunciado:
 
 ![image](https://user-images.githubusercontent.com/63562181/219902759-2fcc2531-90d1-478b-9ffc-d8e2f4a74665.png)
 
-Creamos lainterfaz llamada Shape.java en el directorio src/main/java/edu/eci/cvds/patterns/shape:
+Creamos la interfaz llamada Shape.java en el directorio src/main/java/edu/eci/cvds/patterns/shape:
 
-![image](https://user-images.githubusercontent.com/63562181/219902808-79eaa4e3-2836-4461-aff3-8b6acf2c42f0.png)
+![image](https://user-images.githubusercontent.com/63562181/219903013-a61d70db-0c91-4143-8eb5-b344c9bb4212.png)
 
+Creamos una  enumeración llamada RegularShapeType.java en el directorio src/main/java/edu/eci/cvds/patterns/shapes
 
+![image](https://user-images.githubusercontent.com/63562181/219902854-932fcf14-db13-48c0-967f-abda3d0dda71.png)
 
+En el directorio src/main/java/edu/eci/cvds/patterns/shapes/concrete cramos las clase Triangle, Quadrilateral, Pentagon,
+Hexagon, que implementen la interfaz creada y retornan el número correspondiente de vértices que tiene la figura. 
+
+Por ejemplo la clase Triangle:
+
+![image](https://user-images.githubusercontent.com/63562181/219902983-9e028332-0dfb-48a1-9b20-892d38f3b738.png)
+
+Creamos las otras clases:
+
+![image](https://user-images.githubusercontent.com/63562181/219902992-05e92e3f-3dda-4dc8-a71e-cd29cc7e08c0.png)
+
+Creamos el archivo ShapeMain.java en el directorio src/main/java/edu/eci/cvds/patterns/shapes y agregamos el codigo dado en el enunciado:
+
+![image](https://user-images.githubusercontent.com/63562181/219903040-af2bd5b0-2d50-4320-8a1e-8a31e4d1ca7e.png)
 
 
