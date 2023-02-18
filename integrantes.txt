@@ -1,0 +1,34 @@
+Andrés Camilo Oñate Quimbayo
+
+Maven:
+Maven es un “Project Management Framework”, esto es, un framework de gestión de proyectos de software, que proporciona un modelo estándar de gestión y descripción de proyectos.
+
+Fases:
+- validate
+- compile
+- test
+- package
+- verfy
+- install
+- deploy
+
+
+Ciclo de vida:
+
+El ciclo de vida default, que gestiona la construcción y despliegue del proyecto.
+
+El ciclo de vida clean, que gestiona la limpieza del directorio del proyecto. Es decir, se encarga de eliminar todos los archivos generados en el proceso de construcción y despliegue.
+
+El ciclo de vida site, que gestiona la creación de la documentación del proyecto.
+
+Un Maven plugin se encarga de centralizar una serie de tareas que son comunes a la construcción del software y están fuertemente relacionadas . Así pues cada plugin dispone de varias tareas a ejecutar. Por ejemplo el plugin de Compile dispone de dos tareas a cada tarea se la denomina Maven Goal. 
+
+Repositorio Central de MAVEN:
+
+El repositorio de Maven (o repositorio central) tiene una estructura que permite que los archivos como, por ejemplo, archivos JAR tengan versiones distintas que se descubren después fácilmente con un mecanismo de denominación bien conocido. A continuación, las herramientas de creación pueden utilizar estos nombres para extraer dinámicamente las dependencias de la aplicación. En la definición de la aplicación que se denomina archivo POM, cuando se utiliza Maven como una herramienta de compilación, simplemente denomine las dependencias y el proceso de compilación sabrá qué hacer a partir de ahí.
+
+Bibliografia:
+-https://www.ibm.com/docs/es/ibm-mq/9.1?topic=applications-java-application-development-using-maven-repository
+- https://maven.apache.org/archetype/index.html
+- https://wiki.uqbar.org/wiki/articles/maven.html
+
