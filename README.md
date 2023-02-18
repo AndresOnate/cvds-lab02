@@ -87,8 +87,32 @@ Creamos el archivo ShapeMain.java en el directorio src/main/java/edu/eci/cvds/pa
 Creamos la clase ShapeFactory.java en el directorio src/main/java/edu/eci/cvds/patterns/shapes implementando el patrón fábrica, haciendo uso de la
 instrucción switch-case de Java y usando las enumeraciones.
 
-![image](https://user-images.githubusercontent.com/63562181/219903193-63c83e4b-5695-4d7d-aa59-ba15885fbd80.png)
+![image](https://user-images.githubusercontent.com/63562181/219903227-23847f44-efe8-4e22-bf76-807e9f51dcef.png)
+
 
 ### Pruebas ShapeMain 
 
+1. Sin parámetros: `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain"`
+
+![image](https://user-images.githubusercontent.com/63562181/219903280-5bc8857c-40b3-460b-89da-053a21669fa1.png)
+
+FUnciona correctamenta dado que en la clase ShapeMain se verifica que la variable `args` no sea nula.
+
+2. Parámetro: qwerty `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="qwerty"`
+
+![image](https://user-images.githubusercontent.com/63562181/219903329-64ffd867-cc70-4d37-8ef3-0d5bf59fb185.png)
+
+Funciona correctamente dado que en la clase ShapeMain se captura la execión lanzada y muestra el mensaje:
+
+Parámetro: pentagon `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="pentagon"`
+
+![image](https://user-images.githubusercontent.com/63562181/219903395-1bef2abd-fd61-43f6-bcc4-0dd8b8f2f1de.png)
+
+Comportamiento similar a la pruea anterior, pentagon no esta definida en RegularShapeType.java
+
+Parámetro Hexagon `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Hexagon"`
+
+![image](https://user-images.githubusercontent.com/63562181/219903450-b2a16a7b-9e20-408f-89c3-0d03647b2c05.png)
+
+Comortamiento correcto, muestra el mensaje esperado.
 
