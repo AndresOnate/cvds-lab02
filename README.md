@@ -104,13 +104,13 @@ FUnciona correctamenta dado que en la clase ShapeMain se verifica que la variabl
 
 Funciona correctamente dado que en la clase ShapeMain se captura la execión lanzada y muestra el mensaje:
 
-Parámetro: pentagon `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="pentagon"`
+3. Parámetro: pentagon `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="pentagon"`
 
 ![image](https://user-images.githubusercontent.com/63562181/219903395-1bef2abd-fd61-43f6-bcc4-0dd8b8f2f1de.png)
 
 Comportamiento similar a la pruea anterior, pentagon no esta definida en RegularShapeType.java
 
-Parámetro Hexagon `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Hexagon"`
+4. Parámetro Hexagon `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Hexagon"`
 
 ![image](https://user-images.githubusercontent.com/63562181/219903450-b2a16a7b-9e20-408f-89c3-0d03647b2c05.png)
 
