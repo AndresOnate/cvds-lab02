@@ -84,4 +84,11 @@ Creamos el archivo ShapeMain.java en el directorio src/main/java/edu/eci/cvds/pa
 
 ![image](https://user-images.githubusercontent.com/63562181/219903040-af2bd5b0-2d50-4320-8a1e-8a31e4d1ca7e.png)
 
+Creamos la clase ShapeFactory.java en el directorio src/main/java/edu/eci/cvds/patterns/shapes implementando el patrón fábrica, haciendo uso de la
+instrucción switch-case de Java y usando las enumeraciones.
+
+![image](https://user-images.githubusercontent.com/63562181/219903193-63c83e4b-5695-4d7d-aa59-ba15885fbd80.png)
+
+### Pruebas ShapeMain 
+
 
