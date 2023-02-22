@@ -63,32 +63,97 @@ Creamos los paquetes mencionados en el enunciado:
 
 Creamos la interfaz llamada Shape.java en el directorio src/main/java/edu/eci/cvds/patterns/shape:
 
-![image](https://user-images.githubusercontent.com/63562181/219903013-a61d70db-0c91-4143-8eb5-b344c9bb4212.png)
+```
+package edu.eci.cvds.patterns.shapes;
+
+public interface Shape {
+    public int getNumberOfEdges();
+}
+```
 
 Creamos una  enumeración llamada RegularShapeType.java en el directorio src/main/java/edu/eci/cvds/patterns/shapes
 
-![image](https://user-images.githubusercontent.com/63562181/219902854-932fcf14-db13-48c0-967f-abda3d0dda71.png)
+```
+package edu.eci.cvds.patterns.shapes;
+
+public enum RegularShapeType {
+    Triangle, Quadrilateral, Pentagon, Hexagon
+}
+```
 
 En el directorio src/main/java/edu/eci/cvds/patterns/shapes/concrete cramos las clase Triangle, Quadrilateral, Pentagon,
 Hexagon, que implementen la interfaz creada y retornan el número correspondiente de vértices que tiene la figura. 
 
 Por ejemplo la clase Triangle:
+```
+package edu.eci.cvds.patterns.shapes.concrete;
+import edu.eci.cvds.patterns.shapes.Shape;
 
-![image](https://user-images.githubusercontent.com/63562181/219902983-9e028332-0dfb-48a1-9b20-892d38f3b738.png)
-
+public class Triangle implements Shape {
+    public int getNumberOfEdges() {
+        return 3;
+    }
+}
+```
 Creamos las otras clases:
 
 ![image](https://user-images.githubusercontent.com/63562181/219902992-05e92e3f-3dda-4dc8-a71e-cd29cc7e08c0.png)
 
 Creamos el archivo ShapeMain.java en el directorio src/main/java/edu/eci/cvds/patterns/shapes y agregamos el codigo dado en el enunciado:
 
-![image](https://user-images.githubusercontent.com/63562181/219903040-af2bd5b0-2d50-4320-8a1e-8a31e4d1ca7e.png)
+```
+package edu.eci.cvds.patterns.shapes;
+
+public class ShapeMain {
+    public static void main(String[] args) {
+        if (args == null || args.length != 1) {
+            System.err.println("Parameter of type RegularShapeType is required.");
+            return;
+        }
+        try {
+            RegularShapeType type = RegularShapeType.valueOf(args[0]);
+            Shape shape = ShapeFactory.create(type);
+            System.out.println(String.format("Successfully created a %s with %s sides.", type,
+                    shape.getNumberOfEdges()));
+        } catch (IllegalArgumentException ex) {
+            System.err.println("Parameter '" + args[0] + "' is not a valid RegularShapeType"); return;
+        }
+    }
+}
+```
 
 Creamos la clase ShapeFactory.java en el directorio src/main/java/edu/eci/cvds/patterns/shapes implementando el patrón fábrica, haciendo uso de la
 instrucción switch-case de Java y usando las enumeraciones.
 
-![image](https://user-images.githubusercontent.com/63562181/219903227-23847f44-efe8-4e22-bf76-807e9f51dcef.png)
+```
+package edu.eci.cvds.patterns.shapes;
 
+import edu.eci.cvds.patterns.shapes.concrete.Hexagon;
+import edu.eci.cvds.patterns.shapes.concrete.Pentagon;
+import edu.eci.cvds.patterns.shapes.concrete.Quadrilateral;
+import edu.eci.cvds.patterns.shapes.concrete.Triangle;
+/**
+ * Author: Andres Camilo Onate Quimbayo
+ * Class that uses the factory pattern, making use of the
+ * java switch-case statement and using enums.
+ */
+public class ShapeFactory {
+    public static Shape create(RegularShapeType type) {
+        switch (type) {
+            case Triangle:
+                return new Triangle();
+            case Quadrilateral:
+                return new Quadrilateral();
+            case Pentagon:
+                return new Pentagon();
+            case Hexagon:
+                return new Hexagon();
+            default:
+                return null;
+        }
+    }
+}
+```
 
 ### Pruebas ShapeMain 
 
