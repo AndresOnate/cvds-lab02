@@ -161,7 +161,7 @@ public class ShapeFactory {
 
 ![image](https://user-images.githubusercontent.com/63562181/219903280-5bc8857c-40b3-460b-89da-053a21669fa1.png)
 
-FUnciona correctamenta dado que en la clase ShapeMain se verifica que la variable `args` no sea nula.
+Funciona correctamente dado que en la clase ShapeMain se verifica que la variable `args` no sea nula.
 
 2. Parámetro: qwerty `mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="qwerty"`
 
