@@ -181,3 +181,4 @@ Comportamiento similar a la pruea anterior, pentagon no esta definida en Regular
 
 Comortamiento correcto, muestra el mensaje esperado.
 
+- Crearemos una base de datos local usando Docker:
